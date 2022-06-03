@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /* *, *:before, *:after
-  box-sizing: border-box */
+ box-sizing: border-box */
 .body {
   background-color: #c5c5c5;
 }
 
 .main-conteiner {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: grid;
   grid-template-columns: 1fr 2.5fr;
   max-width: 1200px;
@@ -33,10 +33,7 @@ h4 {
 
 /* Sidebar section */
 .sidebar-section {
-  display: grid;
   background-color: #607762;
-  justify-content: center;
-  align-items: center;
 }
 
 .sidebar-section-img {
@@ -317,7 +314,7 @@ h4 {
 }
 
 .certificate-img-one {
-  width: 25%;
+  width: 24%;
   cursor: pointer;
 }
 
@@ -326,53 +323,58 @@ h4 {
   transition: 0.7s;
 }
 
+.examples-of-works {
+  text-align: center;
+  justify-content: center;
+}
+
 @media (max-width: 991.98px) {
   .main-conteiner {
     display: grid;
     grid-template-columns: 0.9fr 2fr;
+    /* Sidebar section */
+    /* Main content section */
+    /* My projects */
+    /* My work experience */
+    /* My education */
+    /* My сertificates */
   }
-  /* Sidebar section */
-  .contact-section-type {
+  .main-conteiner .contact-section-type {
     margin-left: 10px;
   }
-  .contact-section-link {
+  .main-conteiner .contact-section-type-link {
     font-size: 15px;
   }
-  .tech-skills-section, .soft-skills-section {
+  .main-conteiner .tech-skills-section, .main-conteiner .soft-skills-section {
     margin: 0 20px;
   }
-  .tech-skills-item, .soft-skills-item {
+  .main-conteiner .tech-skills-item, .main-conteiner .soft-skills-item {
     margin-left: -10px;
   }
-  /* Main content section */
-  .about-me-description {
+  .main-conteiner .about-me-description {
     font-size: 16px;
   }
-  /* My projects */
-  .my-project-section {
+  .main-conteiner .my-project-section {
     margin-top: 5px;
   }
-  .my-projects-text {
+  .main-conteiner .my-projects-text {
     font-size: 16px;
   }
-  /* My work experience */
-  .my-work-experience {
+  .main-conteiner .my-work-experience {
     margin-top: 5px;
   }
-  /* My education */
-  .my-education-block {
+  .main-conteiner .my-education-block {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-column-gap: 5px;
   }
-  /* My сertificates */
-  .my-certificates-section {
+  .main-conteiner .my-certificates-section {
     margin-top: 5px;
   }
-  .certificate-img-one {
-    width: 32%;
+  .main-conteiner .certificate-img-one {
+    width: 49%;
   }
-  .certificate-img-one:hover {
+  .main-conteiner .certificate-img-one:hover {
     transform: scale(2.5);
   }
 }
@@ -382,31 +384,26 @@ h4 {
     width: 100%;
     display: flex;
     flex-direction: column;
+    /* My content section */
   }
-  .sidebar-section {
-    grid-area: "main-conteiner";
+  .main-conteiner .sidebar-section {
     position: relative;
-    grid-column: 1/2;
-    grid-row: 1/2;
   }
-  .main-content-section {
+  .main-conteiner .main-content-section {
     grid-area: "main-conteiner";
     position: relative;
     grid-column: 1/2;
     grid-row: 2/3;
     width: 100%;
   }
-  .sidebar-section {
+  .main-conteiner .sidebar-section {
     display: grid;
     align-items: start;
-    grid-template-rows: 0.5fr 1fr 2fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "about-me-name-prof", "sidebar-section-img", "contact-section", "tech-skills-section", "soft-skills-section", "language-knowledges-section";
   }
-  .sidebar-section-img {
+  .main-conteiner .sidebar-section-img {
     display: none;
   }
-  .sidebar-section-img-small {
+  .main-conteiner .sidebar-section-img-small {
     display: block;
     grid-area: "sidebar-section";
     position: relative;
@@ -414,24 +411,24 @@ h4 {
     grid-row: 2/3;
     width: 80%;
   }
-  .about-me-name-prof-side {
+  .main-conteiner .about-me-name-prof-side {
     display: inline;
     grid-area: "sidebar-section";
     grid-column: 1/3;
     grid-row: 1/2;
   }
-  .about-me-name {
+  .main-conteiner .about-me-name {
     font-size: 30px;
     margin-top: 10px;
     color: #ffffff;
   }
-  .about-me-prof {
+  .main-conteiner .about-me-prof {
     color: #feffad;
   }
-  .about-me-name-prof {
+  .main-conteiner .about-me-name-prof {
     display: none;
   }
-  .contact-section {
+  .main-conteiner .contact-section {
     grid-area: "sidebar-section";
     position: relative;
     grid-column: 2/3;
@@ -440,52 +437,51 @@ h4 {
     margin-top: 30px;
     font-size: 14px;
   }
-  .contact-section-link {
+  .main-conteiner .contact-section-link {
     font-size: 13px;
   }
-  .tech-skills-section {
+  .main-conteiner .tech-skills-section {
     grid-area: "sidebar-section";
     position: relative;
     grid-column: 1/2;
     grid-row: 3/4;
     margin-top: 10px;
   }
-  .soft-skills-section {
+  .main-conteiner .soft-skills-section {
     grid-area: "sidebar-section";
     position: relative;
     grid-column: 2/3;
     grid-row: 3/4;
     margin-top: 10px;
   }
-  .language-knowledges-section {
+  .main-conteiner .language-knowledges-section {
     grid-area: "sidebar-section";
     position: relative;
     grid-column: 1/3;
     grid-row: 4/5;
   }
-  /* My content section */
-  .about-me-description {
+  .main-conteiner .about-me-description {
     margin: 15px;
   }
-  .my-project-section {
+  .main-conteiner .my-project-section {
     margin-left: 15px;
   }
-  .my-work-experience-section {
+  .main-conteiner .my-work-experience-section {
     margin-left: 15px;
   }
-  .my-education {
+  .main-conteiner .my-education {
     grid-column-gap: 15px;
   }
-  .my-education-section {
+  .main-conteiner .my-education-section {
     margin-left: 15px;
   }
-  .my-certificates-section {
+  .main-conteiner .my-certificates-section {
     margin-left: 15px;
   }
-  .my-certificates-block {
+  .main-conteiner .my-certificates-section-block {
     margin-top: 10px;
   }
-  .certificate-img-one {
+  .main-conteiner .certificate-img-one {
     width: 100%;
   }
 }
